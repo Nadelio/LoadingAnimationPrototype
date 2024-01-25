@@ -8,7 +8,7 @@ public class RunGame
     {
         // this is what will be compiled into a .jar file that calls the .class files that then run the animation.
         Console console = System.console();
-        if(console == null && !GraphicsEnvironment.isHeadless()
+        if(console == null && !GraphicsEnvironment.isHeadless())
         {
             String filename = Main.class.getProtectionDomain().getCodeSource().getLocation().toString().substring(6);
             try {Runtime.getRuntime().exec(new String[]{"cmd","/c","start","cmd","/k","java -jar \"" + filename + "\""});}catch(IOException e){}
